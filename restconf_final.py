@@ -133,7 +133,6 @@ def status():
     if(resp.status_code >= 200 and resp.status_code <= 299):
         print("STATUS OK: {}".format(resp.status_code))
         response_json = resp.json()
-        print(json.dumps(response_json, indent=4))
         admin_status = response_json['ietf-interfaces:interface']['admin-status']
         oper_status = response_json['ietf-interfaces:interface']['oper-status']
         if admin_status == 'up' and oper_status == 'up':

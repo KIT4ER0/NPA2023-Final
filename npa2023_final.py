@@ -89,23 +89,23 @@ while True:
         else:
             responseMessage = "Error: No command or unknown command"
         
-# # 6. Complete the code to post the message to the Webex Teams room.
+# 6. Complete the code to post the message to the Webex Teams room.
         
-#         # the Webex Teams HTTP headers, including the Authoriztion and Content-Type
-#         postHTTPHeaders = HTTPHeaders = {"Authorization": <!!!REPLACEME!!!>, "Content-Type": <!!!REPLACEME!!!>}
+        # the Webex Teams HTTP headers, including the Authoriztion and Content-Type
+        postHTTPHeaders = HTTPHeaders = {"Authorization": accessToken, "Content-Type": "application/json"}
 
-#         # The Webex Teams POST JSON data
-#         # - "roomId" is is ID of the selected room
-#         # - "text": is the responseMessage assembled above
-#         postData = {"roomId": <!!!REPLACEME!!!>, "text": <!!!REPLACEME!!!>}
+        # The Webex Teams POST JSON data
+        # - "roomId" is is ID of the selected room
+        # - "text": is the responseMessage assembled above
+        postData = {"roomId": roomIdToGetMessages, "text": responseMessage}
 
-#         # Post the call to the Webex Teams message API.
-#         r = requests.post(
-#             "<!!!REPLACEME with URL of Webex Teams Messages API!!!>",
-#             data=json.dumps(<!!!REPLACEME!!!>a),
-#             headers=<!!!REPLACEME!!!>,
-#         )
-#         if not r.status_code == 200:
-#             raise Exception(
-#                 "Incorrect reply from Webex Teams API. Status code: {}".format(r.status_code)
-#             )
+        # Post the call to the Webex Teams message API.
+        r = requests.post(
+            "https://webexapis.com/v1/messages",
+            data=json.dumps(postData),
+            headers=postHTTPHeaders,
+        )
+        if not r.status_code == 200:
+            raise Exception(
+                "Incorrect reply from Webex Teams API. Status code: {}".format(r.status_code)
+            )
