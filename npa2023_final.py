@@ -9,7 +9,7 @@
 import requests
 import json
 import time
-# import restconf_final
+import restconf_final
 
 #######################################################################################
 # 2. Assign the Webex hard-coded access token to the variable accessToken.
@@ -74,20 +74,20 @@ while True:
         command = message.split(" ", 1)[1]
         print(command)
 
-# # 5. Complete the logic for each command
+# 5. Complete the logic for each command
 
-#         if command == "create":
-#             <!!!REPLACEME with code for create command!!!>     
-#         elif command == "delete":
-#             <!!!REPLACEME with code for delete command!!!>
-#         elif command == "enable":
-#             <!!!REPLACEME with code for enable command!!!>
-#         elif command == "disable":
-#             <!!!REPLACEME with code for disable command!!!>
-#         elif command == "status":
-#             <!!!REPLACEME with code for status command!!!>
-#         else:
-#             responseMessage = "Error: No command or unknown command"
+        if command == "create":
+            responseMessage = restconf_final.create()
+        elif command == "delete":
+            responseMessage = restconf_final.delete()
+        elif command == "enable":
+            responseMessage = restconf_final.enable()
+        elif command == "disable":
+            responseMessage = restconf_final.disable()
+        elif command == "status":
+            responseMessage = restconf_final.status()
+        else:
+            responseMessage = "Error: No command or unknown command"
         
 # # 6. Complete the code to post the message to the Webex Teams room.
         
