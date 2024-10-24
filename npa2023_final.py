@@ -21,7 +21,7 @@ accessToken = "BearerYjc0OGUyNTAtOWE2OC00MTg5LTkwOGUtMjljYTA2MDA0NmI2NmM5NDI1Y2U
 
 # Defines a variable that will hold the roomId
 roomIdToGetMessages = (
-    "<!!!REPLACEME with roomID of the NPA2023 Webex Teams room!!!>"
+    "Y2lzY29zcGFyazovL3VzL1JPT00vNTFmNTJiMjAtNWQwYi0xMWVmLWE5YTAtNzlkNTQ0ZjRkNGZi"
 )
 
 while True:
