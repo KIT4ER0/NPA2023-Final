@@ -14,7 +14,7 @@ import restconf_final
 #######################################################################################
 # 2. Assign the Webex hard-coded access token to the variable accessToken.
 
-accessToken = "Bearer <!!!REPLACEME with hard-coded token!!!>"
+accessToken = "BearerYjc0OGUyNTAtOWE2OC00MTg5LTkwOGUtMjljYTA2MDA0NmI2NmM5NDI1Y2UtYTg5_P0A1_4fbc8836-28d2-47cd-9b80-e05ba83c5673"
 
 #######################################################################################
 # 3. Prepare parameters get the latest message for messages API.
